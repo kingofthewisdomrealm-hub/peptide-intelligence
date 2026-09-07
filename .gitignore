@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# Node / Python / caches
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+dist/
+build/
+.turbo/
+.next/
+
+# Editor
+.idea/
+.vscode/
+*.swp
