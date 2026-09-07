@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+	--bg: #f4f6f8;
+	--bg-elevated: #ffffff;
+	--ink: #101826;
+	--ink-muted: #5b6575;
+	--ink-faint: #8b95a5;
+	--line: #d7dde6;
+	--accent: #0f6e6a;
+	--accent-soft: #d8efed;
+	--warn: #9a5b00;
+	--warn-soft: #f7e7cc;
+	--danger: #8f1e2c;
+	--danger-soft: #f8dce0;
+	--ok: #1f6b3a;
+	--ok-soft: #d9f0e1;
+	--info: #1e4d8c;
+	--info-soft: #dce8f8;
+	--band-strong: #1f6b3a;
+	--band-good: #2f7d4a;
+	--band-moderate: #8a6d12;
+	--band-early: #9a5b00;
+	--band-experimental: #a33b2a;
+	--band-theoretical: #6b7280;
+}
+
+@theme inline {
+	--color-bg: var(--bg);
+	--color-bg-elevated: var(--bg-elevated);
+	--color-ink: var(--ink);
+	--color-ink-muted: var(--ink-muted);
+	--color-ink-faint: var(--ink-faint);
+	--color-line: var(--line);
+	--color-accent: var(--accent);
+	--color-accent-soft: var(--accent-soft);
+	--color-warn: var(--warn);
+	--color-warn-soft: var(--warn-soft);
+	--color-danger: var(--danger);
+	--color-danger-soft: var(--danger-soft);
+	--color-ok: var(--ok);
+	--color-ok-soft: var(--ok-soft);
+	--color-info: var(--info);
+	--color-info-soft: var(--info-soft);
+	--font-sans: var(--font-plex);
+	--font-display: var(--font-fraunces);
+}
+
+body {
+	background: var(--bg);
+	color: var(--ink);
+	font-family: var(--font-plex), "IBM Plex Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+	font-family: var(--font-fraunces), Fraunces, Georgia, serif;
+}
+
+::selection {
+	background: var(--accent-soft);
+}
+
+@keyframes score-fill {
+	from {
+		stroke-dashoffset: var(--score-circumference, 264);
+	}
+}
+
+@keyframes region-pulse {
+	from {
+		opacity: 0.55;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.score-ring-progress {
+	transition: stroke-dashoffset 0.9s ease-out;
+}
+
+.region-active {
+	animation: region-pulse 0.35s ease-out;
+}
